@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+.collect label {
+    margin: 0;
+}
+
+.collect .source-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.collect .source-list li {
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+#loading {
+    display: none;
+}
+
+#loading.active {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+}
+
+#loading.active .mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    background-color: rgba(0,0,0,.5);
+    z-index: 998;
+}
+
+#loading.active .loader{
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 999;
+}
+
+.collect .col-sc-name,
+.collect #list .sc-name {
+    width: 200px;
+}
+
+.collect .col-sc-list-url,
+.collect #list .sc-list-url {
+    width: 300px;
+}
+
+.collect #list .sc-list-url a {
+    width: 300px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.collect .col-sc-title,
+.collect #list .sc-title {
+    width: auto;
+}
+
+.collect .col-sc-regdate,
+.collect #list .sc-regdate {
+    width: 100px;
+}
+
+.collect .col-sc-status,
+.collect #list .sc-status {
+    width: 80px;
+}
+
+.collect .col-sc-del,
+.collect #list .sc-del {
+    width: 50px;
+}
+

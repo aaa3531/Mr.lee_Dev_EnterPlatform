@@ -1,0 +1,45 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.live-tab{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.live-tab > li{
+    display: inline-block;
+    margin:10px 5px;
+    margin-bottom: 20px;
+}
+.live-tab > li > a{
+    color: #666;
+    font-size: 18px;
+    background: #eee;
+    padding: 3px 10px;
+    font-weight: 800;
+    border-radius: 30px;
+}
+.live-tab > li > a.on{
+    color:#ffffff;
+    background: #cc1515
+}
+.wff_floating_banner_styles{
+    display: none;
+}
+@media all and (max-width:768px){
+    .live-tab > li{
+        margin: 5px 0px;
+    }
+    .live-tab > li > a{
+        font-size: 14px;
+    }
+}

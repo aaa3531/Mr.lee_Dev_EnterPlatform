@@ -1,0 +1,11 @@
+{
+    "require": {
+        "ezyang/htmlpurifier": "^4.11",
+        "hieu-le/wordpress-xmlrpc-client": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "kr\\c2\\": "lib/classes"
+        }
+    }
+}

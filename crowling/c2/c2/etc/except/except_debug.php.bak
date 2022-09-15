@@ -1,0 +1,96 @@
+<?php if(!defined('__C2__')) exit;?>
+<!doctype html>
+<html>
+<body>
+
+<div style="margin:5px auto; width:90%">
+
+<h2 style="color:#f00">OOPs! An error has occurred!</h2>
+
+<table style="border:2px solid #aaa; border-collapse:collapse; width:100%">
+<col width="150" />
+<col width="*" />
+<tbody>
+<?php if($err_no){?>
+<tr><th style="border:1px solid #aaa;text-align:left">Error Code</th><td style="border:1px solid #aaa">[<?php echo $err_no?>]<?php echo $err_label?></td></tr>
+<?php }?>
+
+<?php if($err_file){?>
+<tr><th style="border:1px solid #aaa;text-align:left">File</th><td style="border:1px solid #aaa"><?php echo $err_file?></td></tr>
+<?php }?>
+
+<?php if($err_line){?>
+<tr><th style="border:1px solid #aaa;text-align:left">Line</th><td style="border:1px solid #aaa"><?php echo $err_line?></td></tr>
+<?php }?>
+
+<?php foreach($ext_msg as $key=>$value){?>
+<tr><th style="border:1px solid #aaa;text-align:left"><?php echo $key?></th><td style="border:1px solid #aaa">
+		<?php
+		if(is_array($value)){
+			echo '<pre style="text-align:left">';
+			print_r($value);
+			echo '</pre>';
+		}else if(is_object($value)){
+			echo get_class($value);
+		}else{
+			echo $value;
+		}
+		?>
+	</td></tr>
+<?php }?>
+
+<tr><th style="border:1px solid #aaa;text-align:left">Description</th><td style="border:1px solid #aaa"><?php echo $err_msg?></td></tr>
+</tbody>
+</table>
+
+<?php
+//Fatal Error 일경우 하단코드 처리 안함
+if($err_no == E_ERROR) exit();
+
+$debug = debug_backtrace();
+?>
+
+<h3 style="margin-top:10px">Back Trace File List</h3>
+
+<?php
+//깊이가 1이면 인덱스 0부터
+//$sidx = count($debug) > 1 ? 1 : 0;
+
+
+$is_find = FALSE;
+$i = 0;
+$depth = count($debug);
+foreach($debug as $item){
+	
+	if($is_find==FALSE){
+		
+		if($err_no!=E_ERROR && isset($item['file']) && $item['file']!=$err_file && isset($item['line']) && $item['line']!=$err_line){
+			$depth--;
+			continue;
+		}
+		$is_find = TRUE;
+	}
+?>
+<fieldset style="margin:5px 0;border:1px solid #aaa;padding:5px">
+<legend style="position:relative;line-height:100%;font-size:14px;display:block;width:auto;height:auto;text-indent:0px;overflow:none">Depth. <?php echo $depth?></legend>
+<?php
+	if(isset($item['file'])){
+		echo 'File : '.$item['file'].' (Line : '.$item['line'].')<BR>';
+	}
+	
+	if(isset($item['function'])){
+		echo 'Function : '.$item['function'].'<BR>';
+	}
+	
+	if(isset($item['class'])){
+		if($item['class']!='')echo 'Class : '.$item['class'].'<BR>';
+	}
+	
+	echo '</fieldset>';
+	
+	$depth--;
+}
+?>
+</div>
+</body>
+<html>

@@ -1,0 +1,106 @@
+[
+    {
+        "name": "ezyang/htmlpurifier",
+        "version": "v4.11.0",
+        "version_normalized": "4.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ezyang/htmlpurifier.git",
+            "reference": "83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7",
+            "reference": "83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2"
+        },
+        "require-dev": {
+            "simpletest/simpletest": "dev-master#72de02a7b80c6bb8864ef9bf66d41d2f58f826bd"
+        },
+        "time": "2019-07-14T18:58:38+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "HTMLPurifier": "library/"
+            },
+            "files": [
+                "library/HTMLPurifier.composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Edward Z. Yang",
+                "email": "admin@htmlpurifier.org",
+                "homepage": "http://ezyang.com"
+            }
+        ],
+        "description": "Standards compliant HTML filter written in PHP",
+        "homepage": "http://htmlpurifier.org/",
+        "keywords": [
+            "html"
+        ]
+    },
+    {
+        "name": "hieu-le/wordpress-xmlrpc-client",
+        "version": "2.5.0",
+        "version_normalized": "2.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/letrunghieu/wordpress-xmlrpc-client.git",
+            "reference": "64ce550961b1885b8fc8b63dec66670f54fff28f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/letrunghieu/wordpress-xmlrpc-client/zipball/64ce550961b1885b8fc8b63dec66670f54fff28f",
+            "reference": "64ce550961b1885b8fc8b63dec66670f54fff28f",
+            "shasum": ""
+        },
+        "require": {
+            "ext-xmlrpc": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "dev-master",
+            "illuminate/support": "~4.0",
+            "php-vcr/php-vcr": "^1.0",
+            "php-vcr/phpunit-testlistener-vcr": "*",
+            "phpunit/phpunit": "*",
+            "symfony/yaml": "2.*"
+        },
+        "time": "2016-02-04T08:05:47+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "HieuLe\\WordpressXmlrpcClient\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Hieu Le",
+                "email": "letrunghieu.cse09@gmail.com",
+                "homepage": "http://www.hieule.info"
+            }
+        ],
+        "description": "A PHP client for Wordpress websites that closely implement the XML-RPC WordPress API with full test suite built in",
+        "keywords": [
+            "api",
+            "client",
+            "remote",
+            "wordpress",
+            "xmlrpc"
+        ]
+    }
+]

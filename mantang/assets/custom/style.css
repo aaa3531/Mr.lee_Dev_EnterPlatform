@@ -1,0 +1,272 @@
+@charset "utf-8";
+/*메인 화면*/
+.live-score-main{
+    position:relative;
+}
+.live-score-main .wff_livescore_sport_header{
+    position:sticky;
+    z-index: 100;
+    width: 100%;
+    top:0;
+}
+.live-score-main > h3{
+    text-align: center;
+    background: #cc1515;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 30px;
+}
+.live-score-main > ul{
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    position:relative;
+}
+.live-score-main > ul > li{
+    list-style:none;
+    float:left;
+    margin:10px;
+    padding:0 5px;
+    font-size: 14px;
+    border-bottom: 4px solid #ddd;
+    color: #777;
+}
+.live-score-main > ul > li.current{
+    border-bottom: 4px solid #ff0303;
+    font-weight:800;
+    color: #000;
+}
+.live-score-main > div.tab-content{
+    display:block;
+    height:0px;
+    width:0px;
+    position:absolute;
+    left:0;
+    top:130px;
+    overflow: hidden;
+
+}
+.live-score-main > div.tab-content.current{
+    position:absolute;
+    display: block;
+    width:100%;
+    height: 550px;
+    overflow:auto;
+}
+
+.live-score-main > div.tab-content.current .wff_floating_banner_styles,
+.live-score-main > div.tab-content .wff_floating_banner_styles{
+    display:none !important;
+}
+.live-score-main > div.tab-content.current > iframe{
+    width: 100%;
+    height: 100%;
+}
+.widget-box {
+    overflow: hidden;
+}
+.widget-box.ankoo-main .post-content{
+    display:none;
+}
+.widget-box.uchat-widget{
+    height: 600px;
+    overflow: visible;
+}
+.widget-box > iframe{
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+ #chat-close,#livescore-close,#sports-close{
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        padding-top:10px;
+        color:#Ffffff;
+        position: absolute;
+        top:-40px;
+        right:0px;
+        background: #d60101;
+        border-radius: 30px 30px 0px 0px;
+        cursor:pointer;
+    }
+#chat-div{
+    display:block;
+    height: 500px;
+    position:fixed;
+    width: 70%;
+    left: 0;
+    z-index: 990 !important;
+    bottom:-500px;
+    margin:0 15%;
+    border: 6px solid #d60101;
+    transition: all 0.2s ease;
+}
+#chat-div > iframe{
+    position: absolute;
+    top:0;
+}
+#chat-div.on{
+     bottom:70px;
+}
+#livescore-div.on{
+    bottom: 70px;
+    display: block;
+}
+#sportlive-div.on{
+    bottom:70px;
+    display: block;
+}
+
+#livescore-div{
+    position:fixed;
+    display:block;
+    left:0;
+    width: 70%;
+    margin: 0 15%;
+    height: 700px;
+    z-index: 800;
+    bottom: -700px;
+    padding: 0 15px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    border: 6px solid #d60101;
+}
+#livescore-div > #live-score-section{
+    width: 100%;
+    height: 600px;
+}
+#sportlive-div{
+    position:fixed;
+    display:block;
+    left:0;
+    width: 70%;
+    margin: 0 15%;
+    height: 700px;
+    padding: 0 15px;
+    z-index: 800;
+    bottom: -700px;
+    background: #e0e0e0;
+     border: 6px solid #d60101;
+    transition: all 0.2s ease;
+}
+.banner-index{
+    position:relative;
+    overflow: visible !important;
+}
+.left-banner{
+    position:absolute;
+    width:200px;
+    height:auto;
+    left: -220px;
+}
+.bbs-left-banner{
+    position:absolute;
+    width:200px;
+    height:auto;
+    left: -540px;
+}
+.bbs-right-banner{
+    position:absolute;
+    width:200px;
+    height:auto;
+    right: -220px;
+    top:0;
+    margin-top:20px;
+}
+.right-banner{
+    position:absolute;
+    width:200px;
+    height:auto;
+    right: -220px;
+    top:0;
+}
+@media all and (max-width:1400px){
+    .right-banner,.bbs-right-banner{
+        display: none;
+    }
+}
+@media all and (max-width:768px){
+    #chat-div{
+        margin:0;
+        overflow: visible;
+        width: 100%;
+        height: 400px;
+        position: fixed !important;
+        bottom:-600px;
+        left:0;
+        z-index: 900;
+        background: #ddd;
+        transition: all 0.2s ease;
+    }
+    .live-score-main > h3{
+        font-size: 18px;
+        width: 70%;
+        margin:0 15%;
+        margin-top:-25px
+    }
+    .live-score-main > ul > li{
+    list-style:none;
+    float:left;
+    margin:2px 5px;
+    padding:0 5px !important;
+    font-size: 14px !important;
+    border-bottom: 4px solid #ddd;
+    color: #777;
+       }
+        .live-score-main > ul > li.current{
+    border-bottom: 4px solid #ff0303;
+    font-weight:800;
+    color: #000;
+      }
+    .live-score-main > ul > li{
+        font-size: 13px;
+}
+    #sportlive-div{
+    position:fixed !important;
+        width: 100%;
+        margin:0;
+        height:600px;
+        bottom:-700px;
+   }
+    #livescore-div{
+        position:fixed !important;
+        width: 100%;
+        margin:0;
+        height:450px;
+        bottom:-700px;
+    }
+    #livescore-div > #live-score-section{
+        height: 400px;
+        margin-top: 10px;
+    }
+    .live-score-main > div.tab-content{
+        top:85px;
+    }
+    .live-score-main > div.tab-content.current{
+        height: 350px;
+    }
+     #livescore-div.on,#sportlive-div.on{
+        bottom:40px;
+     }
+    #chat-div.on{
+        bottom:40px;
+    }
+    #chat-close,#livescore-close,#sports-close{
+        display: block;
+        z-index: 600;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        top:-40px;
+        line-height: 20px;
+        padding-top:10px;
+        color:#Ffffff;
+        background: #d60101;
+        border-radius: 30px 30px 0px 0px;
+    }
+}

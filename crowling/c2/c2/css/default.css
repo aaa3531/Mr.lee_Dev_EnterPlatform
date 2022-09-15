@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+html, body {
+    font-size: 14px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+th {
+    text-align: center;
+}
+
+.pagination {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+.form-group {
+    border-bottom: 1px dashed #e5e5e5;
+    padding-bottom: 1rem;
+}
+
+.form-group:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-control-inline {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.msg_error {
+    font-weight: 800;
+    color: #f00;
+}
+
+.popup-title {
+    font-size: 1.5rem;
+    background: #673ab7;
+    color: #fff;
+    font-weight: 800;
+    padding: 1rem;
+}

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.tto-oneline-msg { line-height:50px; height:50px; overflow:hidden; background:linear-gradient(to top,#4e2929,#000,#4e2929); font-size:16px; font-weight:800; color: #ffffff; border-radius:30px; margin-top: 15px;}
+@media all and (max-width:600px){
+    .tto-oneline-msg {border-radius:0; margin-top:0; margin-bottom:0;}
+}
